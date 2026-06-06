@@ -37,16 +37,16 @@ export default function About() {
             </div>
           </div>
           <p className="text-gray-600 leading-relaxed mb-3">
-            Born in Niger's Tillabéri region, Issoufou Boureima is a writer, forensic scientist, and educator 
-            based in London. He holds an MSc in Forensic Chemistry and Toxicology and a BSc in Physics.
+            Issoufou Boureima is a writer, forensic scientist, and educator based in London. He holds an MSc in Forensic Chemistry and Toxicology and a BSc in Physics.
           </p>
           <p className="text-gray-600 leading-relaxed mb-3">
-            His debut novel <em>Tea for the Chosen</em> blends West African oral tradition with contemporary 
-            literary fiction, tracing stories of identity, displacement, and resilience across the Sahel.
+            His debut novel, <em>Tea for the Chosen</em>, blends West African oral traditions with contemporary literary fiction, exploring themes of identity, culture, memory, and science across the Sahel.
+          </p>
+          <p className="text-gray-600 leading-relaxed mb-3">
+            He is the founder of Sahel Press, an independent publishing venture dedicated to amplifying African voices and stories. Through Sahel Press, he seeks to create a platform for authentic, thought-provoking literature that bridges cultures and brings underrepresented perspectives to a global audience.
           </p>
           <p className="text-gray-600 leading-relaxed">
-            He founded Sahel Press to create a home for African literary voices — starting with his own, 
-            and expanding outward.
+            When not writing, Issoufou continues his work in science and education while developing new literary projects inspired by the history, people, and landscapes of West Africa.
           </p>
         </div>
 
