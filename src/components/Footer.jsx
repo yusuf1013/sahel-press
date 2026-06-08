@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { Link } from 'react-router-dom'
 import { supabase } from '../lib/supabase'
 
 export default function Footer() {
@@ -26,28 +27,66 @@ export default function Footer() {
   }
 
   return (
-    <footer style={{ backgroundColor: '#2C2A29' }} className="text-white px-6 py-12 mt-20">
-      <div className="max-w-7xl mx-auto grid md:grid-cols-3 gap-10">
-        <div>
+    <footer style={{ backgroundColor: '#2C2A29' }} className="text-white px-6 py-16 mt-20">
+      <div className="max-w-7xl mx-auto grid md:grid-cols-4 gap-10">
+
+        {/* Brand */}
+        <div className="md:col-span-1">
           <h3 className="text-lg font-bold tracking-widest uppercase mb-3" style={{ color: '#C8873A' }}>
             Sahel Press
           </h3>
-          <p className="text-sm text-gray-400 leading-relaxed">
-            A London-based literary imprint publishing Sahel-rooted fiction and non-fiction.
+          <p className="text-sm text-gray-400 leading-relaxed mb-4">
+            An independent literary imprint publishing African voices. Based in London.
           </p>
+          
+            href="https://ko-fi.com/sahelpress"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-block px-5 py-2 rounded-full text-sm font-semibold transition-opacity hover:opacity-80"
+            style={{ backgroundColor: '#C8873A', color: 'white' }}
+          >
+            Support Us on Ko-fi
+          </a>
         </div>
 
+        {/* Navigation */}
         <div>
-          <h4 className="text-sm font-semibold uppercase tracking-widest mb-3 text-gray-300">Links</h4>
+          <h4 className="text-sm font-semibold uppercase tracking-widest mb-4 text-gray-300">Explore</h4>
           <ul className="space-y-2 text-sm text-gray-400">
-            <li><a href="/books" className="hover:text-amber-400 transition-colors">Books</a></li>
-            <li><a href="/submit" className="hover:text-amber-400 transition-colors">Submit Manuscript</a></li>
-            <li><a href="/about" className="hover:text-amber-400 transition-colors">About</a></li>
+            <li><Link to="/books" className="hover:text-amber-400 transition-colors">Books</Link></li>
+            <li><Link to="/news" className="hover:text-amber-400 transition-colors">News</Link></li>
+            <li><Link to="/about" className="hover:text-amber-400 transition-colors">About</Link></li>
+            <li><Link to="/submit" className="hover:text-amber-400 transition-colors">Submit Manuscript</Link></li>
           </ul>
         </div>
 
+        {/* Contact */}
         <div>
-          <h4 className="text-sm font-semibold uppercase tracking-widest mb-3 text-gray-300">Newsletter</h4>
+          <h4 className="text-sm font-semibold uppercase tracking-widest mb-4 text-gray-300">Contact</h4>
+          <ul className="space-y-2 text-sm text-gray-400">
+            <li>
+              <a href="mailto:issoufou@sahelpress.com" className="hover:text-amber-400 transition-colors">
+                issoufou@sahelpress.com
+              </a>
+            </li>
+            <li>London, United Kingdom</li>
+            <li>
+              
+                href="https://ko-fi.com/sahelpress"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-amber-400 transition-colors"
+              >
+                Ko-fi
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        {/* Newsletter */}
+        <div>
+          <h4 className="text-sm font-semibold uppercase tracking-widest mb-4 text-gray-300">Newsletter</h4>
+          <p className="text-sm text-gray-400 mb-3">Get updates on new books and open submissions.</p>
           <form onSubmit={handleSubscribe} className="flex flex-col gap-2">
             <input
               type="email"
@@ -58,7 +97,7 @@ export default function Footer() {
             />
             <button
               type="submit"
-              className="px-4 py-2 rounded text-sm font-semibold transition-colors"
+              className="px-4 py-2 rounded text-sm font-semibold transition-opacity hover:opacity-80"
               style={{ backgroundColor: '#5A6E4A', color: 'white' }}
             >
               Subscribe
@@ -66,22 +105,13 @@ export default function Footer() {
             {message && <p className="text-xs text-amber-400 mt-1">{message}</p>}
           </form>
         </div>
+
       </div>
 
-      <div className="max-w-7xl mx-auto mt-10 pt-6 border-t border-gray-700 text-center space-y-3">
-          
-            href="https://ko-fi.com/sahelpress"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-block px-6 py-2 rounded-full text-sm font-semibold transition-opacity hover:opacity-80"
-            style={{ backgroundColor: '#C8873A', color: 'white' }}
-          >
-            Support Sahel Press on Ko-fi
-          </a>
-          <p className="text-xs text-gray-500">
-            © {new Date().getFullYear()} Sahel Press. All rights reserved.
-          </p>
-        </div>
+      <div className="max-w-7xl mx-auto mt-12 pt-6 border-t border-gray-700 flex flex-col md:flex-row items-center justify-between gap-3 text-xs text-gray-500">
+        <p>© {new Date().getFullYear()} Sahel Press. All rights reserved.</p>
+        <p>Founded by Issoufou Boureima</p>
+      </div>
     </footer>
   )
 }
