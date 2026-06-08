@@ -19,13 +19,11 @@ export default function Header({ user }) {
           <Link to="/books" className="hover:text-amber-400 transition-colors">Books</Link>
           <Link to="/submit" className="hover:text-amber-400 transition-colors">Submit</Link>
           <Link to="/about" className="hover:text-amber-400 transition-colors">About</Link>
-          {user ? (
+         {user && (
             <>
               <Link to="/admin/dashboard" className="hover:text-amber-400 transition-colors">Dashboard</Link>
               <button onClick={handleLogout} className="hover:text-amber-400 transition-colors">Logout</button>
             </>
-          ) : (
-            <Link to="/admin/login" className="hover:text-amber-400 transition-colors">Admin</Link>
           )}
         </nav>
       </div>
