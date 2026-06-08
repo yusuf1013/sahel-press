@@ -16,7 +16,8 @@ export default function Header({ user }) {
           Sahel Press
         </Link>
         <nav className="flex gap-6 text-sm tracking-wide">
-          <Link to="/books" className="hover:text-amber-400 transition-colors">Books</Link>
+          <Link to="/about" className="hover:text-amber-400 transition-colors">About</Link>
+          <Link to="/news" className="hover:text-amber-400 transition-colors">News</Link>
           <Link to="/submit" className="hover:text-amber-400 transition-colors">Submit</Link>
           <Link to="/about" className="hover:text-amber-400 transition-colors">About</Link>
          {user && (
