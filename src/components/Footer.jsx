@@ -38,7 +38,7 @@ export default function Footer() {
         <div>
           <h4 className="text-sm font-semibold uppercase tracking-widest mb-4 text-gray-300">Contact</h4>
           <ul className="space-y-2 text-sm text-gray-400">
-            <li><a href="mailto:issoufou@sahelpress.com" className="hover:text-amber-400 transition-colors">issoufou@sahelpress.com</a></li>
+            <li><a href="mailto:issoufou@sahelpress.co.uk" className="hover:text-amber-400 transition-colors">issoufou@sahelpress.co.uk</a></li>
             <li>London, United Kingdom</li>
           </ul>
         </div>
