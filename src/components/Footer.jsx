@@ -68,9 +68,20 @@ export default function Footer() {
         </div>
       </div>
 
-      <div className="max-w-7xl mx-auto mt-10 pt-6 border-t border-gray-700 text-center text-xs text-gray-500">
-        © {new Date().getFullYear()} Sahel Press. All rights reserved.
-      </div>
+      <div className="max-w-7xl mx-auto mt-10 pt-6 border-t border-gray-700 text-center space-y-3">
+          
+            href="https://ko-fi.com/sahelpress"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-block px-6 py-2 rounded-full text-sm font-semibold transition-opacity hover:opacity-80"
+            style={{ backgroundColor: '#C8873A', color: 'white' }}
+          >
+            Support Sahel Press on Ko-fi
+          </a>
+          <p className="text-xs text-gray-500">
+            © {new Date().getFullYear()} Sahel Press. All rights reserved.
+          </p>
+        </div>
     </footer>
   )
 }

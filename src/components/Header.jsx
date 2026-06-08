@@ -18,6 +18,15 @@ export default function Header({ user }) {
         <nav className="flex gap-6 text-sm tracking-wide">
           <Link to="/about" className="hover:text-amber-400 transition-colors">About</Link>
           <Link to="/news" className="hover:text-amber-400 transition-colors">News</Link>
+          
+            href="https://ko-fi.com/sahelpress"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="px-4 py-1.5 rounded-full text-sm font-semibold transition-colors"
+            style={{ backgroundColor: '#C8873A', color: 'white' }}
+          >
+            Support Us
+          </a>
           <Link to="/submit" className="hover:text-amber-400 transition-colors">Submit</Link>
           <Link to="/about" className="hover:text-amber-400 transition-colors">About</Link>
          {user && (
