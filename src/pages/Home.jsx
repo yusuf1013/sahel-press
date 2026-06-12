@@ -64,8 +64,8 @@ export default function Home() {
           <h2 className="text-3xl font-bold mb-4" style={{ color: '#2C2A29' }}>
             Issoufou Boureima
           </h2>
-          <p className="text-gray-600 leading-relaxed mb-4">
-            London-based writer, forensic scientist, and founder of Sahel Press. Born in Niger's Tillabéri region, his work bridges West African oral tradition with contemporary literary fiction.
+        <p className="text-gray-600 leading-relaxed mb-4">
+            Issoufou Boureima is a writer, forensic scientist, and educator based in London, and the founder of Sahel Press.
           </p>
           <p className="text-gray-600 leading-relaxed mb-6">
             His debut novel <em>Tea for the Chosen</em> is available now on Amazon.
