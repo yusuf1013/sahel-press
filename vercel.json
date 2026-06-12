@@ -1,5 +1,5 @@
 {
   "rewrites": [
-    { "source": "/(.*)", "destination": "/" }
+    { "source": "/((?!favicon|apple-touch-icon|android-chrome|.*\\.(?:ico|png|svg|jpg|jpeg|webp|css|js|json)).*)", "destination": "/" }
   ]
 }
