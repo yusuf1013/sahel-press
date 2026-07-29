@@ -10,6 +10,7 @@ import Books from './pages/Books'
 import BookDetail from './pages/BookDetail'
 import About from './pages/About'
 import Submit from './pages/Submit'
+import Remember from './pages/Remember'
 import News from './pages/News'
 import PostDetail from './pages/PostDetail'
 
@@ -31,6 +32,7 @@ function Layout() {
         <Route path="/books/:id" element={<BookDetail />} />
         <Route path="/about" element={<About />} />
         <Route path="/submit" element={<Submit />} />
+        <Route path="/remember" element={<Remember />} />
         <Route path="/news" element={<News />} />
         <Route path="/news/:id" element={<PostDetail />} />
         <Route path="/admin/login" element={<Login />} />
