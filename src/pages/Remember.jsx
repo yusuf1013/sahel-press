@@ -6,6 +6,9 @@ const SONGS = [
   { title: "We'll Meet Again", note: 'Parker and Charles, 1939' },
   { title: 'Que Sera, Sera', note: 'Livingston and Evans, 1955' },
   { title: 'My Bonnie Lies Over the Ocean', note: 'Traditional' },
+  { title: 'Roll Out the Barrel', note: 'Vejvoda, 1927' },
+  { title: 'Show Me the Way to Go Home', note: 'Irving King, 1925' },
+  { title: 'Amazing Grace', note: 'Traditional hymn' },
 ]
 
 function youtubeLink(title) {
