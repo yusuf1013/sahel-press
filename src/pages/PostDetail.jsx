@@ -2,6 +2,21 @@ import { useEffect, useState } from 'react'
 import { useParams, Link } from 'react-router-dom'
 import { supabase } from '../lib/supabase'
 
+const URL_RE = /(https?:\/\/[^\s<]*[^\s<.,;:!?)\]]|www\.[^\s<]*[^\s<.,;:!?)\]])/g
+
+function linkify(text) {
+  const parts = String(text || '').split(URL_RE)
+  return parts.map(function (part, i) {
+    const isHttp = /^https?:\/\//.test(part)
+    const isWww = /^www\./.test(part)
+    if (isHttp || isWww) {
+      const href = isHttp ? part : 'https://' + part
+      return <a key={i} href={href} target="_blank" rel="noopener noreferrer" className="underline underline-offset-4 break-words" style={{ color: '#5A6E4A' }}>{part}</a>
+    }
+    return part
+  })
+}
+
 export default function PostDetail() {
   const { id } = useParams()
   const [post, setPost] = useState(null)
@@ -9,11 +24,7 @@ export default function PostDetail() {
 
   useEffect(() => {
     async function fetchPost() {
-      const { data } = await supabase
-        .from('posts')
-        .select('*')
-        .eq('id', id)
-        .single()
+      const { data } = await supabase.from('posts').select('*').eq('id', id).single()
       if (data) setPost(data)
       setLoading(false)
     }
@@ -45,23 +56,16 @@ export default function PostDetail() {
 
         <div className="bg-white rounded-lg shadow-sm p-8 mt-4">
           <div className="flex items-center gap-3 mb-4">
-            <span
-              className="text-xs px-3 py-1 rounded-full font-medium"
-              style={{ backgroundColor: '#F0EBE3', color: '#5A6E4A' }}
-            >
-              {post.category}
-            </span>
+            <span className="text-xs px-3 py-1 rounded-full font-medium" style={{ backgroundColor: '#F0EBE3', color: '#5A6E4A' }}>{post.category}</span>
             <span className="text-xs text-gray-400">
-              {new Date(post.published_date).toLocaleDateString('en-GB', {
-                day: 'numeric', month: 'long', year: 'numeric'
-              })}
+              {new Date(post.published_date).toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' })}
             </span>
           </div>
 
           <h1 className="text-3xl font-bold mb-6" style={{ color: '#2C2A29' }}>{post.title}</h1>
 
-          <div className="text-gray-600 leading-relaxed whitespace-pre-wrap">
-            {post.content}
+          <div className="text-gray-600 leading-relaxed whitespace-pre-wrap break-words">
+            {linkify(post.content)}
           </div>
         </div>
       </div>
