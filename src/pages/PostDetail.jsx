@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import { useParams, Link } from 'react-router-dom'
 import { supabase } from '../lib/supabase'
+import ReactMarkdown from 'react-markdown'
 
 export default function PostDetail() {
   const { id } = useParams()
@@ -60,9 +61,9 @@ export default function PostDetail() {
 
           <h1 className="text-3xl font-bold mb-6" style={{ color: '#2C2A29' }}>{post.title}</h1>
 
-          <div className="text-gray-600 leading-relaxed whitespace-pre-wrap">
-            {post.content}
-          </div>
+          <div className="text-gray-600 leading-relaxed post-body">
+            <ReactMarkdown>{post.content}</ReactMarkdown>
+          </div</div>
         </div>
       </div>
     </div>

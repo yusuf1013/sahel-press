@@ -1,1 +1,6 @@
 @import "tailwindcss";
+.post-body p { margin-bottom: 1rem; }
+.post-body a { color: #B8722C; text-decoration: underline; }
+.post-body strong { color: #2C2A29; }
+.post-body h2 { font-size: 1.3rem; font-weight: 700; color: #2C2A29; margin: 1.5rem 0 0.75rem; }
+.post-body ul { list-style: disc; margin-left: 1.25rem; margin-bottom: 1rem; }
