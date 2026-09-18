@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import { useParams, Link } from 'react-router-dom'
 import { supabase } from '../lib/supabase'
+import ReactMarkdown from 'react-markdown'
 
 const URL_RE = /(https?:\/\/[^\s<]*[^\s<.,;:!?)\]]|www\.[^\s<]*[^\s<.,;:!?)\]])/g
 
@@ -64,9 +65,15 @@ export default function PostDetail() {
 
           <h1 className="text-3xl font-bold mb-6" style={{ color: '#2C2A29' }}>{post.title}</h1>
 
+<<<<<<< HEAD
           <div className="text-gray-600 leading-relaxed whitespace-pre-wrap break-words">
             {linkify(post.content)}
           </div>
+=======
+          <div className="text-gray-600 leading-relaxed post-body">
+            <ReactMarkdown>{post.content}</ReactMarkdown>
+          </div</div>
+>>>>>>> c441efdbd58b45750e84ae84fc1b6759e9e8ee22
         </div>
       </div>
     </div>
