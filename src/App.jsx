@@ -3,6 +3,7 @@ import { AuthProvider } from './context/AuthContext'
 import { useAuth } from './context/AuthContext'
 import Header from './components/Header'
 import Footer from './components/Footer'
+import ScrollToTop from './components/ScrollToTop'
 import ProtectedRoute from './components/ProtectedRoute'
 
 import Home from './pages/Home'
@@ -25,6 +26,7 @@ function Layout() {
   const { user } = useAuth()
   return (
     <>
+          <ScrollToTop />
       <Header user={user} />
       <Routes>
         <Route path="/" element={<Home />} />
