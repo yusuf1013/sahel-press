@@ -21,12 +21,13 @@ import AdminBooks from './pages/admin/Books'
 import Submissions from './pages/admin/Submissions'
 import Newsletter from './pages/admin/Newsletter'
 import AdminPosts from './pages/admin/Posts'
-
+import { Analytics } from '@vercel/analytics/react'
 function Layout() {
   const { user } = useAuth()
   return (
     <>
           <ScrollToTop />
+                <Analytics />
       <Header user={user} />
       <Routes>
         <Route path="/" element={<Home />} />
