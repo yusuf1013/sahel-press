@@ -77,7 +77,7 @@ export default function Audio() {
           Every track from the book, spoken in clear British English. Free, no sign-up.
         </p>
         <p className="text-base text-gray-600 leading-relaxed mb-10">
-          Listen before a shift, on the bus or on your break. Hear it, say it, then use it. The voices are made with artificial intelligence. The words are the same as in the book.
+          Listen before a shift, on the bus or on your break. Hear it, say it, then use it. The words are the same as in the book.
         </p>
 
         {GROUPS.map(function (group) {
